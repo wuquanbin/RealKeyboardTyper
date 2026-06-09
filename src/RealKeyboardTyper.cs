@@ -47,6 +47,13 @@ namespace RealKeyboardTyper
             Size = new Size(940, 680);
             Font = new Font("Microsoft YaHei UI", 9F);
             KeyPreview = true;
+            try
+            {
+                Icon = Icon.ExtractAssociatedIcon(Application.ExecutablePath);
+            }
+            catch
+            {
+            }
 
             var root = new TableLayoutPanel
             {
